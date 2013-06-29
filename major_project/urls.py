@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from test_server.views import hello, index, process_xml, process_SMS, write_XML
+from major_project.views import hello, index, process_xml, process_SMS, write_XML
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()

@@ -47,6 +47,11 @@ def write_XML(request):
     data_list = get_data_list.get_all_data()
     
     write1 = write_answer_XML.XML()
-    write1.write_XML(data_list)
-    return render(request, 'template3.html', {'message': "done"})
+    answer_xml_number = write1.write_XML(data_list)
+    #return render(request, 'template3.html', {'message': answer_xml})
+    xml_filename = "XML%s.xml"%answer_xml_number
+    fo = open("E:/aptana workspace/test_server/XML_files/%s"%xml_filename,"r")
+    return render(request, 'template3.html', {'message': fo.read()})
+    #return HttpResponse(open("E:/aptana workspace/test_server/XML_files/%s"%xml_filename).read())
+
         

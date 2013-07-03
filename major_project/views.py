@@ -20,7 +20,7 @@ def hello(request):
 
 def process_xml(request):
    process123 = question_XML_read.XML() 
-   attributes_list = process123.get_attributes("E:/aptana workspace/test_server/XML_files/Question_XML.xml")
+   attributes_list = process123.get_attributes("../XML_files/Question_XML.xml")
    
    att_send = questionXML_query.questionXML()
    att_send.clear_question_table()

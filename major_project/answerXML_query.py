@@ -27,7 +27,7 @@ class answerXML:
         respondent_attribute_list = ['wardno', 'address1', 'code', 'name', 'isnew', 'type', 'questionnairecode', 'monitoringplanid', 'sitecode', 'latitude', 'longitude', 'age', 'gender', 'parentid']
        
         for item in data_attribute_list:
-            q1 = answer(question_number=item, received_answer = 'hehe')
+            q1 = answer(question_number=item, received_answer = 'empty')
             q1.save()
         
         for item in qn_attributes_list:

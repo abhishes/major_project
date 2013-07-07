@@ -1,5 +1,6 @@
 # Django settings for major_project project.
 import major_project
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -109,7 +110,8 @@ ROOT_URLCONF = 'major_project.urls'
 WSGI_APPLICATION = 'major_project.wsgi.application'
 
 TEMPLATE_DIRS = (
-    'E:/aptana workspace/major_project/templates',
+    os.path.normpath(os.path.join(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)), "templates")),
+    #'E:/aptana workspace/major_project/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.

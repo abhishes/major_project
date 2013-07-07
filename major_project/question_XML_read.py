@@ -15,7 +15,7 @@ class XML:
     
     def get_attributes(self,path):
         self.path = path
-        tree = xml.parse("E:\hawa Backup\python test code\Question_XML.xml")
+        tree = xml.parse(path)
         root = tree.getroot()
         
         flag = False #to check the occurrence of new modules

@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
-from major_project.views import hello, index, process_xml, process_SMS, write_XML
+from major_project.views import hello, index, process_questionnaire_xml, process_SMS, write_XML,\
+    process_questionnaire_xml
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
@@ -7,7 +8,7 @@ from major_project.views import hello, index, process_xml, process_SMS, write_XM
 urlpatterns = patterns('',
     url(r'^$', index),                   
     url(r'^hello/$',hello),
-    url(r'^process_xml/$',process_xml),
+    url(r'^process_xml/$',process_questionnaire_xml),
     url(r'^process_SMS/$',process_SMS),
     url(r'^write_XML/$',write_XML),
     # Examples:
